@@ -1,9 +1,9 @@
-# Mtokijani-worldwide.github.io
-Mtokijani Foundation 
-The Mtokijani Foundation is an environmental non-governmental organization (NGO) based in Arusha, Tanzania, focused on reforestation, river cleanups, and sustainable water management. It engages in community tree-planting initiatives, builds and manages fish ponds for natural water filtration, and works to conserve water sources by improving catchment areas. 
-
-ACTIVITIES:
-Tree planting: Organizes community planting days in urban areas and works with schools to plant and manage trees. River cleanups: Participates in and funds efforts to clean up local rivers. Water conservation: Builds fish ponds with natural filtration systems to clean polluted water and conserve water sources. Community engagement: Shares knowledge and promotes environmental protection among local communities. Partnerships: Collaborates with other organizations, such as the PAMOJA Project, to achieve its goals. 
-Our aims is to promote environmental conservation, climate change awareness, tree planting, and waste management.
-Vision: To create a sustainable and environmentally conscious society that values and protects natural ecosystems for present and future generations. 
-Mission: To promote environmental conservation, climate change awareness, tree planting, waste management, and sustainable community livelihoods, advocacy, and partnerships.
+Mtokijani Foundation - Website package (final)
+Files:
+- index.html, about.html, gallery.html, contact.html
+- style.css
+- images/ (logo, favicon, hero, gallery images)
+Notes:
+- Upload contents of this folder to your GitHub repository (root) for GitHub Pages.
+- Donate buttons link to #donate placeholder. Replace with your payment link if needed.
+- Logo files: logo_mtokijani.svg (vector) and logo_mtokijani.png (raster)
