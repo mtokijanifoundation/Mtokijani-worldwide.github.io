@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Donate – Mtokijani Foundation</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#1A5E2B;color:#fff;display:flex;align-items:center;justify-content:center;height:100vh}
+.donate-card{background:rgba(255,255,255,0.06);border-radius:12px;padding:28px;max-width:420px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.35)}
+.donate-card img{max-width:160px;margin:8px auto;display:block}
+.pay-button{background:#E60000;color:#fff;border:none;padding:12px 20px;border-radius:10px;font-weight:800;cursor:pointer;margin-top:12px}
+.pay-button:hover{filter:brightness(.95);transform:translateY(-3px)}
+.popup{position:fixed;inset:0;display:none;align-items:center;justify-content:center}
+.popup-overlay{position:absolute;inset:0;background:rgba(184,233,134,0.12)}
+.popup-content{position:relative;background:#fff;color:#1A5E2B;padding:20px;border-radius:12px;z-index:2;max-width:360px;box-shadow:0 8px 40px rgba(0,0,0,.25)}
+.close-btn{background:#1A5E2B;color:#fff;border:none;padding:8px 12px;border-radius:8px;font-weight:700;cursor:pointer;margin-top:12px}
+.thanks{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#B8E986;color:#0b4a2a;padding:10px 22px;border-radius:8px;display:none;z-index:999}
+</style>
+</head>
+<body>
+<div class="donate-card">
+  <img src="images/logo_mtokijani.png" alt="Mtokijani logo"/>
+  <img src="images/mpesa_logo.png" alt="M-Pesa logo"/>
+  <h1 style="color:#B8E986">Donate via M-Pesa</h1>
+  <p><strong>Account Name:</strong> Omary Yusufu Mwalimu<br><strong>Phone Number:</strong> +255 746 181 719</p>
+  <p>Your contribution helps protect nature and empower communities.<br>— <em>Omary Yusufu Mwalimu, Founder &amp; CEO</em></p>
+  <button class="pay-button" onclick="openPopup()">Donate Now via M-Pesa</button>
+  <p style="margin-top:14px"><a href="index.html" style="color:#fff;text-decoration:underline">← Back to Home</a></p>
+</div>
+
+<div id="popup" class="popup" aria-hidden="true">
+  <div class="popup-overlay"></div>
+  <div class="popup-content" role="dialog" aria-modal="true">
+    <h3 style="margin-top:0">M-Pesa Donation Steps</h3>
+    <p>1. Open M-Pesa menu (*150*00#)<br>2. Choose "Send Money"<br>3. Enter <strong>+255 746 181 719</strong><br>4. Enter amount and confirm</p>
+    <button class="close-btn" onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<div id="thanks" class="thanks">Thank you for supporting Mtokijani Foundation!</div>
+
+<audio id="chime" src="chime.mp3" preload="auto"></audio>
+
+<script>
+function openPopup(){document.getElementById('popup').style.display='flex';document.getElementById('popup').setAttribute('aria-hidden','false');}
+function closePopup(){
+  document.getElementById('popup').style.display='none';
+  document.getElementById('popup').setAttribute('aria-hidden','true');
+  // show thanks and play chime
+  var t=document.getElementById('thanks'); t.style.display='block';
+  var s=document.getElementById('chime'); try{ s.play(); }catch(e){}
+  setTimeout(function(){ t.style.display='none'; },3000);
+}
+</script>
+</body>
+</html>
